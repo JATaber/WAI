@@ -1,7 +1,7 @@
 <template>
-  <div class="hello">
+  <div class="hello jumbotron">
     <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
+    <h2 class="jumbotron-fluid">Essential Links</h2>
     <ul>
       <li>
         <a
