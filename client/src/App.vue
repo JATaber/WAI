@@ -1,6 +1,13 @@
 <template>
   <div id="app">
-    <router-view/>
+
+    <!-- This is the main area of the view -->
+    <div class="container">
+      <div class="row">
+        <router-view/>
+      </div>
+    </div>
+
   </div>
 </template>
 
