@@ -21,7 +21,8 @@ export default {
 }
 </script>
 
-<style lang="css">
+<style lang="scss">
+  @import './assets/_customVars.scss';
 
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -29,4 +30,12 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
 }
+
+  body{
+    background-color: $primary;
+  }
+
+  .container{
+    margin-top: 60px;
+  }
 </style>
