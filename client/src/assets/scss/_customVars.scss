@@ -53,7 +53,7 @@ $grey: #333333;
     width: 1220px;
     // margin-top: 60px;
     max-height: 25%;
-    height: 230px;
+    height: 200px;
   }
 
 }
@@ -67,4 +67,15 @@ $grey: #333333;
 
 // THIS IS FOR THE TWITCH PLAYER
 
+.player{
+  margin-top: 20px;
+  height: 300px;
 
+  @include mq(tablet){
+    height: 400px;
+  }
+
+  @include mq(desktop){
+    height: 650px;
+  }
+}

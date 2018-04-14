@@ -1,6 +1,8 @@
 <template>
   <div class="container">
-    <twitch-player
+    <img class="banner" src="../assets/aki_stream.png" alt="stream">
+
+    <twitch-player class="player" width="100%" height="100%"
       :channel="channel"
       ></twitch-player>
   </div>
