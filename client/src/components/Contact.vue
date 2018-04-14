@@ -1,5 +1,5 @@
 <template>
   <div class="container">
-    <h1>Contact</h1>
+    <img class="banner" src="../assets/aki_contact.png" alt="contact">
   </div>
 </template>
