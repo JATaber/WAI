@@ -3,8 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import LoadScript from 'vue-plugin-load-script'
+
+Vue.use(LoadScript)
 
 Vue.config.productionTip = false
 

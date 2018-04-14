@@ -1,0 +1,70 @@
+$primary: #6a6258;
+$yellow: #e6da60;
+$blue: #24b4be;
+$grey: #333333;
+
+@mixin mq($size){
+  @if $size == tablet{
+    @media (min-width: 600px){@content;}
+  }
+  @else if $size == desktop{
+    @media (min-width: 1200px){@content;}
+  }
+}
+
+
+//this is for the navBar
+
+.logo{
+  width: 60px;
+  height: 60px;
+}
+
+.nav{
+  background-color: $grey;
+}
+
+.nav-link{
+  font-size: 20px;
+  color: $blue !important;
+}
+
+.active > .nav-link{
+  color: $yellow !important;
+}
+
+// this is for the main page
+
+.banner{
+  max-width: 100%;
+}
+
+.infoTitle{
+  max-width: 100%;
+
+  @include mq(tablet){
+    width: 1220px;
+    // margin-top: 60px;
+    max-height: 25%;
+    height: 130px;
+  }
+
+  @include mq(desktop){
+    width: 1220px;
+    // margin-top: 60px;
+    max-height: 25%;
+    height: 230px;
+  }
+
+}
+
+.jumbotron{
+  margin-top: 10px;
+  font-size: 22px;
+  color: $yellow;
+  background-color: $blue !important;
+}
+
+// THIS IS FOR THE TWITCH PLAYER
+
+

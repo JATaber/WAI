@@ -25,35 +25,4 @@
 </template>
 
 <style lang="scss" scoped>
-  @import '../assets/_customVars.scss';
-
-  .banner{
-    max-width: 100%;
-  }
-
-  .infoTitle{
-    max-width: 100%;
-
-    @include mq(tablet){
-      width: 1220px;
-      // margin-top: 60px;
-      max-height: 25%;
-      height: 180px;
-    }
-
-    @include mq(desktop){
-      width: 1220px;
-      // margin-top: 60px;
-      max-height: 25%;
-      height: 180px;
-    }
-
-  }
-
-  .info{
-    margin-top: 10px;
-    font-size: 22px;
-    color: $yellow;
-    background-color: $blue;
-  }
 </style>
