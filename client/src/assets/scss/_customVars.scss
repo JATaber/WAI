@@ -26,11 +26,11 @@ $grey: #333333;
 
 .nav-link{
   font-size: 20px;
-  color: $blue !important;
+  color: $yellow !important;
 }
 
 .active > .nav-link{
-  color: $yellow !important;
+  color: $blue !important;
 }
 
 // this is for the main page
@@ -61,8 +61,8 @@ $grey: #333333;
 .jumbotron{
   margin-top: 10px;
   font-size: 22px;
-  color: $yellow;
-  background-color: $blue !important;
+  color: $primary;
+  background-color: $yellow !important;
 }
 
 // THIS IS FOR THE TWITCH PLAYER
