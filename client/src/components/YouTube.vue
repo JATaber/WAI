@@ -1,5 +1,7 @@
 <template>
-  <div>
+  <div class="container">
+    <img class="banner" src="../assets/aki_youTube.png" alt="youTube">
+
   </div>
 </template>
 

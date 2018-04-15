@@ -5,8 +5,11 @@ import App from './App'
 import router from './router'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import LoadScript from 'vue-plugin-load-script'
+import 'vue-awesome/icons'
+import Icon from 'vue-awesome/components/Icon'
 
 Vue.use(LoadScript)
+Vue.component('icon', Icon)
 
 Vue.config.productionTip = false
 
