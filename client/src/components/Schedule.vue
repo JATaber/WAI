@@ -3,39 +3,46 @@
     <img class="banner" src="../assets/aki_sched.png" alt="banner">
 
     <div class="jumbotron">
-      <b-table striped hover :items="items" :fields="fields"></b-table>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>Start Time</th>
+            <th>End Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(schedule, index) in sched" :key="index">
+            <td>{{ schedule.day }}</td>
+            <td>{{ schedule.start }}</td>
+            <td>{{ schedule.end }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </template>
 
 <script>
+import Firebase from 'firebase'
+
+let config = {
+  apiKey: 'AIzaSyCZoioS61EvIRwMzmtBH07dTr4loPb4Ugs',
+  authDomain: 'wai-fullsail.firebaseapp.com',
+  databaseURL: 'https://wai-fullsail.firebaseio.com',
+  projectId: 'wai-fullsail',
+  storageBucket: 'wai-fullsail.appspot.com',
+  messagingSenderId: '133913508287'
+}
+
+let app = Firebase.initializeApp(config)
+let db = app.database()
+
+let scheduleRef = db.ref('schedule')
+
 export default {
-  data () {
-    return {
-      fields: [
-        {
-          key: 'day',
-          sortable: false
-        },
-        {
-          key: 'startTime',
-          sortable: false
-        },
-        {
-          key: 'endTime',
-          sortable: false
-        }
-      ],
-      items: [
-        { day: 'Sunday', startTime: '~9am CST', endTime: '???' },
-        { day: 'Monday', startTime: '', endTime: '' },
-        { day: 'Tuesday', startTime: '~2/3pm CST', endTime: '???' },
-        { day: 'Wednesday', startTime: '', endTime: '' },
-        { day: 'Thursday', startTime: '~2/3pm CST', endTime: '???' },
-        { day: 'Friday', startTime: '', endTime: '' },
-        { day: 'Saturday', startTime: '~9am CST', endTime: '???' }
-      ]
-    }
+  firebase: {
+    sched: scheduleRef
   }
 }
 </script>

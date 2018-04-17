@@ -7,8 +7,10 @@ import 'bootstrap-vue/dist/bootstrap-vue.css'
 import LoadScript from 'vue-plugin-load-script'
 import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
+import VueFire from 'vuefire'
 
 Vue.use(LoadScript)
+Vue.use(VueFire)
 Vue.component('icon', Icon)
 
 Vue.config.productionTip = false
