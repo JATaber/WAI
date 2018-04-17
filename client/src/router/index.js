@@ -8,9 +8,11 @@ import Stream from '@/components/Stream'
 import YouTube from '@/components/YouTube'
 import Navbar from '@/components/Navbar'
 import Main from '@/components/Main'
+import Vuelidate from 'vuelidate'
 
 Vue.use(Router)
 Vue.use(BootstrapVue)
+Vue.use(Vuelidate)
 
 export default new Router({
   mode: 'history',
