@@ -17,27 +17,52 @@ export default {
   data () {
     return {
       videos: [],
+      playlistID: [],
       errors: []
     }
   },
   mounted () {
-    // this.searchYouTbe()
-    this.getPosts()
+    // this.getPosts()
+    this.getPlaylistId()
   },
   methods: {
-    async getPosts () {
-      axios.get('https://www.googleapis.com/youtube/v3/search', {
+    getPlaylistId () {
+      axios.get('https://www.googleapis.com/youtube/v3/playlists', {
         params: {
-          part: 'snippet',
-          order: 'date',
-          q: 'awkwardkittyinc',
+          channelId: 'UCoSX07YpXSK0bekcWCbazRw',
+          part: 'snippet, contentDetails',
           key: apiKey
         }
       })
         .then(response => {
-          if (response) { console.log(response.data.items) }
+          if (response) {
+            response.data.items.forEach((item) => {
+              this.playlistID.push(item.id)
+            })
+            console.log(this.playlistID)
+            this.getVideoID()
+          }
         })
         .catch(error => console.error(error))
+    },
+    getVideoID () {
+      this.playlistID.forEach((item) => {
+        axios.get('https://www.googleapis.com/youtube/v3/playlistItems', {
+          params: {
+            maxResults: '25',
+            part: 'snippet,contentDetails',
+            playlistId: item,
+            key: apiKey
+          }
+        })
+          .then(response => {
+            response.data.items.forEach((item) => {
+              this.videos.push(item.contentDetails.videoId)
+            })
+            console.log(this.videos)
+          })
+          .catch(error => console.error(error))
+      })
     }
   }
 }
