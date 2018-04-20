@@ -6,21 +6,38 @@
 </template>
 
 <script>
-import PostsService from '@/services/PostsService'
+import axios from 'axios'
+
+// const CLIENT_ID = '501462870335-7o4pi1sr4oerfa2ilmi4rulsqcc6hrs4.apps.googleusercontent.com'
+const apiKey = 'AIzaSyD5ojU-89Hw4jGEvaIx4WMYa1u8SoElbWQ'
+// let BASE_URL = 'https://googleapis.com/youtube/v3/search'
+
 export default {
-  name: 'posts',
+  name: 'videos',
   data () {
     return {
-      posts: []
+      videos: [],
+      errors: []
     }
   },
   mounted () {
+    // this.searchYouTbe()
     this.getPosts()
   },
   methods: {
     async getPosts () {
-      const response = await PostsService.fetchPosts()
-      this.posts = response.data
+      axios.get('https://www.googleapis.com/youtube/v3/search', {
+        params: {
+          part: 'snippet',
+          order: 'date',
+          q: 'awkwardkittyinc',
+          key: apiKey
+        }
+      })
+        .then(response => {
+          if (response) { console.log(response.data.items) }
+        })
+        .catch(error => console.error(error))
     }
   }
 }

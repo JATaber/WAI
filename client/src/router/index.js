@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import BootstrapVue from 'bootstrap-vue'
 import Router from 'vue-router'
-import Posts from '@/components/Posts'
 import Schedule from '@/components/Schedule'
 import Contact from '@/components/Contact'
 import Stream from '@/components/Stream'
@@ -21,11 +20,6 @@ export default new Router({
       path: '/',
       name: 'Main',
       component: Main
-    },
-    {
-      path: '/posts',
-      name: 'Posts',
-      component: Posts
     },
     {
       path: '/schedule',
