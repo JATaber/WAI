@@ -1,6 +1,13 @@
 <template>
   <div class="container">
     <img class="banner" src="../assets/aki_youTube.png" alt="youTube">
+    <div class="jumbotron">
+      <b-card-group columns v-for="(video, index) in videos" :key="index">
+        <b-card class="ml-auto">
+          <youtube :video-id= video :player-vars="playerVars"></youtube>
+        </b-card>
+      </b-card-group>
+    </div>
 
   </div>
 </template>
@@ -18,7 +25,10 @@ export default {
     return {
       videos: [],
       playlistID: [],
-      errors: []
+      errors: [],
+      playerVars: {
+        autoplay: 0
+      }
     }
   },
   mounted () {

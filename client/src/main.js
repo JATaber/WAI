@@ -9,8 +9,9 @@ import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
 import VueFire from 'vuefire'
 import VueAxios from 'vue-axios'
+import VueYoutube from 'vue-youtube'
 
-Vue.use(LoadScript, VueFire, VueAxios)
+Vue.use(LoadScript, VueFire, VueAxios, VueYoutube)
 // Vue.use(VueFire)
 Vue.component('icon', Icon)
 

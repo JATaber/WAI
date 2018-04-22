@@ -8,10 +8,12 @@ import YouTube from '@/components/YouTube'
 import Navbar from '@/components/Navbar'
 import Main from '@/components/Main'
 import Vuelidate from 'vuelidate'
+import VueYoutube from 'vue-youtube'
 
 Vue.use(Router)
 Vue.use(BootstrapVue)
 Vue.use(Vuelidate)
+Vue.use(VueYoutube)
 
 export default new Router({
   mode: 'history',
