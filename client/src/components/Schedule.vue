@@ -41,8 +41,13 @@ let db = app.database()
 let scheduleRef = db.ref('schedule')
 
 export default {
+  name: 'schedule',
   firebase: {
     sched: scheduleRef
+  },
+  data () {
+    return {
+    }
   }
 }
 </script>

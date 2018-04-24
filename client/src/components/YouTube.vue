@@ -2,9 +2,9 @@
   <div class="container">
     <img class="banner" src="../assets/aki_youTube.png" alt="youTube">
     <div class="jumbotron">
-      <b-card-group columns v-for="(video, index) in videos" :key="index">
-        <b-card class="ml-auto">
-          <youtube :video-id= video :player-vars="playerVars"></youtube>
+      <b-card-group columns>
+        <b-card class="ml-auto" v-for="(video, index) in videos" :key="index">
+          <youtube class="video" :video-id= video :player-vars="playerVars"></youtube>
         </b-card>
       </b-card-group>
     </div>
@@ -49,7 +49,7 @@ export default {
             response.data.items.forEach((item) => {
               this.playlistID.push(item.id)
             })
-            console.log(this.playlistID)
+            // console.log(this.playlistID)
             this.getVideoID()
           }
         })
@@ -69,7 +69,7 @@ export default {
             response.data.items.forEach((item) => {
               this.videos.push(item.contentDetails.videoId)
             })
-            console.log(this.videos)
+            // console.log(this.videos)
           })
           .catch(error => console.error(error))
       })
