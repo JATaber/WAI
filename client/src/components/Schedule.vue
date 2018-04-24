@@ -44,10 +44,6 @@ export default {
   name: 'schedule',
   firebase: {
     sched: scheduleRef
-  },
-  data () {
-    return {
-    }
   }
 }
 </script>
