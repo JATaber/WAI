@@ -33,6 +33,15 @@ $grey: #333333;
   color: $blue !important;
 }
 
+.navbar-toggler{
+  border-color: $yellow !important;
+  background-color: $yellow !important;
+}
+
+.navbar-toggler-icon{
+  background-color: $yellow !important;
+}
+
 // this is for the main page
 
 .banner{
