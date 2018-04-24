@@ -12,7 +12,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="(schedule, index) in sched" :key="index">
+          <tr v-for="(schedule, index) in schedules" :key="index">
             <td>{{ schedule.day }}</td>
             <td>{{ schedule.start }}</td>
             <td>{{ schedule.end }}</td>
@@ -36,14 +36,19 @@ let config = {
 }
 
 let app = Firebase.initializeApp(config)
-let db = app.database()
+export let db = app.database()
 
 let scheduleRef = db.ref('schedule')
 
 export default {
   name: 'schedule',
+  data () {
+    return {
+      schedules: {}
+    }
+  },
   firebase: {
-    sched: scheduleRef
+    schedules: scheduleRef
   }
 }
 </script>

@@ -8,11 +8,13 @@ import LoadScript from 'vue-plugin-load-script'
 import 'vue-awesome/icons'
 import Icon from 'vue-awesome/components/Icon'
 import VueFire from 'vuefire'
-import VueAxios from 'vue-axios'
+// import VueAxios from 'vue-axios'
 import VueYoutube from 'vue-youtube'
 
-Vue.use(LoadScript, VueFire, VueAxios, VueYoutube)
-// Vue.use(VueFire)
+Vue.use(LoadScript)
+Vue.use(VueFire)
+// Vue.use(VueAxios)
+Vue.use(VueYoutube)
 Vue.component('icon', Icon)
 
 Vue.config.productionTip = false
