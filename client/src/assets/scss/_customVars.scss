@@ -1,0 +1,119 @@
+$primary: #6a6258;
+$yellow: #e6da60;
+$blue: #24b4be;
+$grey: #333333;
+
+@mixin mq($size){
+  @if $size == tablet{
+    @media (min-width: 600px){@content;}
+  }
+  @else if $size == desktop{
+    @media (min-width: 1000px){@content;}
+  }
+}
+
+
+//this is for the navBar
+
+.logo{
+  width: 60px;
+  height: 60px;
+}
+
+.nav{
+  background-color: $grey;
+}
+
+.nav-link{
+  font-size: 20px;
+  color: $yellow !important;
+}
+
+.active > .nav-link{
+  color: $blue !important;
+}
+
+.navbar-toggler{
+  border-color: $yellow !important;
+  background-color: $yellow !important;
+}
+
+.navbar-toggler-icon{
+  background-color: $yellow !important;
+}
+
+// this is for the main page
+
+.banner{
+  max-width: 100%;
+}
+
+.infoTitle{
+  max-width: 100%;
+
+  @include mq(tablet){
+    width: 1220px;
+    // margin-top: 60px;
+    max-height: 25%;
+    height: 130px;
+  }
+
+  @include mq(desktop){
+    width: 1220px;
+    // margin-top: 60px;
+    max-height: 25%;
+    height: 200px;
+  }
+
+}
+
+.jumbotron{
+  margin-top: 10px;
+  font-size: 22px;
+  color: $primary;
+  background-color: $yellow !important;
+}
+
+// THIS IS FOR THE TWITCH PLAYER
+
+.player{
+  margin-top: 20px;
+  height: 300px;
+
+  @include mq(tablet){
+    height: 400px;
+  }
+
+  @include mq(desktop){
+    height: 650px;
+  }
+}
+
+.chat{
+  height: 400px;
+}
+
+// This is for the contact page
+
+.card-columns {
+  column-count: 1 !important;
+
+  @include mq(desktop){
+    column-count: 2 !important;
+  }
+}
+
+.btn-group{
+  margin-top: 10px;
+}
+
+.card{
+  background-color: $yellow !important;
+  margin-top: 10px;
+}
+
+// This is for the youtube page
+
+.video{
+  max-width: 100%;
+}
