@@ -7,6 +7,33 @@ You'd need to set your NODE_ENV to production and run, because the project has w
 
 `NODE_ENV=production npm run build`
 
+Then you will copy dist/ directory into your website root directory.
+
+If you're deploying with Docker, you'd need an express server, serving the dist/ directory.
+
+## Dockerfile
+
+```
+FROM node:carbon
+
+RUN mkdir -p /usr/src/app
+
+WORKDIR /usr/src/app
+ADD . /usr/src/app
+RUN npm install
+
+ENV NODE_ENV=production
+
+RUN npm run build
+```
+# Remove unused directories
+RUN rm -rf ./src
+RUN rm -rf ./build
+
+# Port to expose
+EXPOSE 8080
+CMD [ "npm", "start" ]
+
 # Failed to Release Procedure
 
 ## This project utilizes the following
