@@ -2,11 +2,11 @@
 
 This project is to demostrate knowledge in Vue-cli
 
-#
+# Installation for local enviroment 
 
-#Failed to Release Procedure
+# Failed to Release Procedure
 
-##This project utilizes the following
+## This project utilizes the following
 
 VueTwitchPlayer
 Firebase
