@@ -25,7 +25,7 @@ RUN npm install
 ENV NODE_ENV=production
 
 RUN npm run build
-```
+
 # Remove unused directories
 RUN rm -rf ./src
 RUN rm -rf ./build
@@ -33,7 +33,7 @@ RUN rm -rf ./build
 # Port to expose
 EXPOSE 8080
 CMD [ "npm", "start" ]
-
+```
 # Failed to Release Procedure
 
 ## This project utilizes the following
