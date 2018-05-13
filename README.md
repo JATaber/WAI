@@ -34,6 +34,9 @@ RUN rm -rf ./build
 EXPOSE 8080
 CMD [ "npm", "start" ]
 ```
+## Note
+You can use Apache or Nginx as proxy, port 80
+
 # Failed to Release Procedure
 
 ## This project utilizes the following
