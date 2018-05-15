@@ -45,6 +45,8 @@ You can use Apache or Nginx as proxy, port 80
 
 # Failed to Release Procedure
 
+This project hasn't gone live and will come out with a Failed to Release Procedure when it goes live.
+
 ## This project utilizes the following
 
 * VueTwitchPlayer
